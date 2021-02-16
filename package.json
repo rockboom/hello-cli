@@ -1,13 +1,14 @@
 {
   "name": "hello-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "关于cli的工程",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "fz-cli": "./bin/www.js"
+    "hello": "./bin/hello",
+    "hello-cli": "./bin/hello"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,14 @@
     "inquirer": "^7.0.6",
     "metalsmith": "^2.3.0",
     "ncp": "^2.0.0",
-    "ora": "^4.0.3"
-  }
+    "ora": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockboom/hello-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rockboom/hello-cli/issues"
+  },
+  "homepage": "https://github.com/rockboom/hello-cli#readme"
 }
