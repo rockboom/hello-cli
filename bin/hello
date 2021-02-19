@@ -47,6 +47,14 @@ program
         require('../lib/build')(cleanArgs(cmd));
     })
 program
+    .command('serve [value]')
+    .description('start a server')
+    .option('-w, --watch', 'watching file change')
+    .action((value, cmd) => {
+        require('../lib/build')();
+        require('../lib/server');
+    })
+program
     .command('ui')
     .description(`start and open ${package.name} ui`)
     .option('-p,--port <port>','Port used for the UI Server')
@@ -54,9 +62,7 @@ program
         console.log(cleanArgs(cmd));
     })
 program.on('--help',function (){
-    console.log();
-    console.log(`Run ${chalk.cyan(`${package.name} <command> --help`)}  show details.`);
-    console.log();
+    console.log(`\n Run ${chalk.cyan(`${package.name} <command> --help`)}  show details. \n`);
 })
 program
     .version(`${package.name}@${package.version}`)
