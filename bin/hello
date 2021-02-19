@@ -36,9 +36,16 @@ program
     .option('-s, --set <path> <value>','set value from option')
     .option('-d, --delete <path>', 'delete option from config')
     .action((value, cmd) => {
-        console.log(value, cleanArgs(cmd)); // 需要提取cmd中的属性
+        console.log('config',value, cleanArgs(cmd)); // 需要提取cmd中的属性
     })
-
+program
+    .command('build [value]')
+    .description('package a folder or a file')
+    .option('-f, --file <path>','build a file')
+    .option('-d, --dir <path>','build a folder')
+    .action((value,cmd)=>{
+        require('../lib/build')(cleanArgs(cmd));
+    })
 program
     .command('ui')
     .description(`start and open ${package.name} ui`)

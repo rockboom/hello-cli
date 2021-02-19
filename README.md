@@ -1,5 +1,5 @@
 # hello-cli
-关于cli的工程
+关于cli的工程，这个脚手架对文件打包后，生成的文件目录并没有改变，依然保持源码一样的文件结构。
 ## 全局包
 - 在项目的根目录下新建 /bin/hello 文件，文件内容如下
 ```js
@@ -22,7 +22,7 @@
     "bin":"./bin/hello"
 }
 ```
-- npm link 链接到本地环境中，即把hello-cli文件夹链接到全局目录下 可以用npm unlink解除链接
+- npm link --force 链接到本地环境中，即把hello-cli文件夹链接到全局目录下 可以用npm unlink解除链接
 
 > link 相当于将当前本地模块链接到npm 目录下，这个npm目录可以直接访问，所以当前包就可以直接访问了
 
@@ -32,6 +32,8 @@
 - 3.将模板下载下来 download-git-repo
 - 4.根据用户的选择动态生成内容 metalsmith
 
+## 编译
+- 编译scss
 ## TODO
 - 1.编译
 - 2.缓存
