@@ -108,7 +108,7 @@ module.exports = async (projectName) => {
 
     // 如果有ask.js 文件 // .template/xxxx
     if(!fs.existsSync(path.join(result,'ask.js'))){
-        await ncp(result, path.resoxlve(projectName));
+        await ncp(result, path.resolve(projectName));
     }else{
         // 复杂的需要模板渲染 渲染后在拷贝
         // 复杂的模板
